@@ -1,11 +1,19 @@
 # Survival_Analysis_Hierarchical_vs_Nonhierarchical_Model
 
-Build two `stan` Weibull model of survival time after kidney transplantation: one is non-hierarchical model `time ~ age + sex + race`, and another is hierarchical model `time ~ age|(sex, race)`. Hierarchical model is slightly better according to `loo`.
+Conducted comparison of hierarchical and non-hierarchical model in survival analysis with two example.
 
-[Data source](http://blogs.oregonstate.edu/bida/data-sets-and-code/)
+- [Kidney](http://blogs.oregonstate.edu/bida/data-sets-and-code/)
 
-## Visualization of group effects
+  Build two `stan` Weibull model of survival time after kidney transplantation: one is non-hierarchical model `time ~ age + sex + race`, and another is hierarchical model `time ~ age|(sex, race)`. Hierarchical model is slightly better according to `loo`.
 
-<p align="center">
-  <img src="https://github.com/xiaobw95/Survival_Analysis_Hierarchical_vs_Nonhierarchical_Model/blob/master/group_effect.png" alt=""/>
-</p>
+  <p align="center">
+    <img src="https://github.com/xiaobw95/Survival_Analysis_Hierarchical_vs_Nonhierarchical_Model/blob/master/group_effect.png" alt=""/>
+  </p>
+
+- [Breast](http://www.cbioportal.org/study?id=brca_metabric#clinical)
+
+  Build two `stan` Weibull model of survival time after kidney transplantation: one is non-hierarchical model `time ~ age + npi + chem + horm + radio + claudin`, and another is hierarchical model `time ~ (age + npi + chem + horm + radio)|(claudin)`, where `claudin` are types of cancer. Hierarchical model is slightly better according to `loo`.
+
+  <p align="center">
+    <img src="https://github.com/xiaobw95/Survival_Analysis_Hierarchical_vs_Nonhierarchical_Model/blob/master/claudin.png" alt=""/>
+  </p>
