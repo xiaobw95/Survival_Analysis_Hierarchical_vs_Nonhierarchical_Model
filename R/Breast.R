@@ -47,7 +47,7 @@ data<-list(N_uc,N_rc,t_uc,t_rc,
 library(rstan)
 model1<-stan('./stan/Breast_nonhierarchical.stan',data=data)
 check_hmc_diagnostics(model1)
-model2<-stan('./stan/Breast_hierarchical.stan',data=data,chains=2)
+model2<-stan('./stan/Breast_hierarchical.stan',data=data)
 check_hmc_diagnostics(model2)
 
 library(loo)
