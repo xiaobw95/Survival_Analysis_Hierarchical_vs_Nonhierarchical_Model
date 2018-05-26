@@ -12,7 +12,7 @@ Conducted comparison of hierarchical and non-hierarchical model in survival anal
 
 - [Breast](http://www.cbioportal.org/study?id=brca_metabric#clinical)
 
-  Build two `stan` Weibull model of survival time after kidney transplantation: one is non-hierarchical model `time ~ age + npi + horm + claudin`, and another is hierarchical model `time ~ (age + npi + horm)|(claudin)`, where `claudin` are types of cancer. Hierarchical model is slightly better according to `loo`.
+  Build two `stan` Weibull model of survival time after kidney transplantation: one is non-hierarchical model `time ~ age + npi + horm + claudin`, and another is hierarchical model `time ~ (age + npi + horm)|(claudin)`, where `claudin` are types of cancer. Hierarchical model is better according to `loo`.
 
   <p align="center">
     <img src="https://github.com/xiaobw95/Survival_Analysis_Hierarchical_vs_Nonhierarchical_Model/blob/master/claudin.png" alt=""/>
